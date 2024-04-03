@@ -1,0 +1,45 @@
+.range-card{
+    position: relative;
+    border-radius: 10px;
+    width: 381px;
+    height: fit-content;
+}
+
+.range-card .image-container{
+    width: 100%;
+    height: 480px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.range-card .image-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.range-card a{
+    text-decoration: none;
+    outline: none;
+    color: var(--text-color800);
+    font-size: 24px;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    padding: 1.5rem 0rem;
+}
+
+.range-card .image-container:hover .overlay{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+}

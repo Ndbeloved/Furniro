@@ -1,0 +1,63 @@
+.overlay .wrapper a{
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    background: var(--primary-color500);
+    padding: 0.5rem 2rem;
+    border-radius: 10px;
+}
+
+.overlay .wrapper{
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.overlay .wrapper-action{
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.overlay .wrapper-action a#main{
+    background: var(--primary-color500);
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    outline: none;
+}
+
+.overlay{
+    overflow: hidden;
+    height: 0;
+    width: 0;
+}
+
+.overlay .wrapper-action .micro-actions{
+    padding: 2rem 1rem;
+    display: flex;
+    gap: 0.9rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.overlay .wrapper-action .micro-actions a#micro{
+    font-size: 14px;
+    color: #fff;
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    outline: none;
+}
+
+.overlay .wrapper-action .micro-actions a#micro img{
+    height: 15px;
+    width: 15px;
+}
+
+.overlay .wrapper-action .micro-actions a#micro:hover{
+    color: var(--primary-color500);
+}

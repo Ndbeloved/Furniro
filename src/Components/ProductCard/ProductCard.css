@@ -1,0 +1,99 @@
+.product-card{
+    position: relative;
+    overflow: hidden;
+    min-width: 285px;
+    max-width: 285px;
+    background:  var(--text-color300);
+    border-radius: 10px;
+}
+
+.product-card .image-cont{
+    width: 100%;
+    position: relative;
+    height: 301;
+    overflow: hidden;
+}
+
+.product-card .image-cont img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: scale .3s ease-in-out;
+}
+
+.product-card .image-cont #discounted-percent{
+    padding: 1.2rem 0.8rem;
+    border-radius: 100%;
+    background: var(--danger-color);
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #fff;
+}
+
+.product-card .image-cont #discounted-percent.new{
+    padding: 1.2rem 0.8rem;
+    border-radius: 100%;
+    background: var(--teal-color);
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #fff;
+}
+
+.product-card .text-wrapper{
+    position: relative;
+    padding: 1rem;
+}
+
+.product-card .text-wrapper p#title{
+    font-size: 24px;
+    color: var(--text-hero);
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+}
+
+.product-card .text-wrapper p#descr{
+    font-size: 16px;
+    color: var(--text-color500);
+    padding-bottom: 0.5rem;
+}
+
+.product-card .text-wrapper p#price{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    color: var(--text-hero);
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+}
+
+.product-card .text-wrapper p#price span{
+    text-decoration: line-through;
+    font-size: 16px;
+    color: var(--text-color400);
+    font-weight: 500;
+}
+
+
+.product-card:hover .overlay{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+
+}
+
+.product-card:hover img{
+    scale: 1.2 1.2;
+}

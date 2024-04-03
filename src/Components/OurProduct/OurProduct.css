@@ -1,0 +1,30 @@
+.our-product{
+    position: relative;
+    padding: 2rem 5rem;
+}
+
+.our-product h2#caption{
+    color: var(--text-hero);
+    font-size: 40px;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.our-product .product-wrapper{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+@media only screen and (max-width: 500px){
+    .our-product{
+        position: relative;
+        padding: 2rem 3%;
+    }
+    .our-product .product-wrapper .product-card{
+        min-width: 100%;
+    }
+}
