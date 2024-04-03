@@ -43,3 +43,9 @@
     display: grid;
     place-items: center;
 }
+
+@media only screen and (max-width: 500px){
+    .range-card{
+        width: 100%;
+    }
+}
