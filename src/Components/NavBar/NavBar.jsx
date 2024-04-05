@@ -18,9 +18,9 @@ const NavBar = () => {
 
         <div className="menu-links">
             <Link to="/">Home</Link>
-            <Link to="/">Shop</Link>
-            <Link to="/">About</Link>
-            <Link to="/">Contact</Link>
+            <Link to="/shop">Shop</Link>
+            <Link to="/about">About</Link>
+            <Link to="/contact">Contact</Link>
         </div>
 
         <div className="account-cart-wrapper">
@@ -36,9 +36,9 @@ const NavBar = () => {
 
         <div className={menuOpen ? "mobile harmburger open" : "mobile harmburger"}>
             <Link to="/" className='active'>Home</Link>
-            <Link to="/">Shop</Link>
-            <Link to="/">About</Link>
-            <Link to="/">Contact</Link>
+            <Link to="/shop">Shop</Link>
+            <Link to="/about">About</Link>
+            <Link to="/contact">Contact</Link>
             <Link to="/"><img src={account} /> Account</Link>
             <Link to="/"><img src={heart} /> Favourites</Link>
             <Link to="/"><img src={cart} /> Cart</Link>    
