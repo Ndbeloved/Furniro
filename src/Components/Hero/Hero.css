@@ -96,4 +96,8 @@
         display: grid;
         place-items: center;
     }
+
+    .hero-wrapper .caption-wrapper .main-wrapper p#lg-caption{
+        font-size: 50px;
+    }
 }

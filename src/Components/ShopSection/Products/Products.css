@@ -8,7 +8,7 @@
 }
 
 .pagination-container{
-    padding: 1rem 5rem;
+    padding: 1rem 5rem 2rem 5rem;
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
@@ -48,6 +48,6 @@
     }
 
     .pagination-container{
-        padding: 1rem 3%;
+        padding: 1rem 3% 2rem 3%;
     }
 }

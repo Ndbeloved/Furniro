@@ -16,7 +16,7 @@ const Hero = () => {
                 <p id='lg-caption'>Discover Our</p>
                 <p id='lg-caption'>New Collection</p>
                 <p id='md-caption'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci laborum ducimus eum ex autem nulla sunt, voluptates nam voluptatum officiis?</p>
-                <Link to="/">Buy Now</Link>
+                <Link to="/shop">Buy Now</Link>
             </div>
         </div>
     </section>
