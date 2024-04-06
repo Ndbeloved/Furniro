@@ -4,9 +4,9 @@ import Products from '../Products/Products'
 import { useState } from 'react'
 
 const Filter = () => {
-    const [filter, setFilter] = useState(16)
-    const [page, setPage] = useState(2)
-    const [prevPage, setPrevPage] = useState(1)
+    const [filter, setFilter] = useState(2)
+    const [page, setPage] = useState(1)
+    const [prevPage, setPrevPage] = useState(0)
     return (
     <>
     <div className="filter-wrapper">

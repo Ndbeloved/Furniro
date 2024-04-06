@@ -9,8 +9,10 @@ import image6 from '../../../assets/Images (6).png'
 import image7 from '../../../assets/Images (7).png'
 import image8 from '../../../assets/Images (8).png'
 import ProductCard from '../../ProductCard/ProductCard'
+import { useState } from 'react'
 
 const Products = ({filter, page, setPage, prevPage, setPrevPage}) => {
+    const [paginationCount, setPaginationCount] = useState(1)
     const data = [
         {
             image: slytherine,
@@ -301,15 +303,39 @@ const Products = ({filter, page, setPage, prevPage, setPrevPage}) => {
             discount: 'none',
         },
     ]
+
+    const next = ()=>{
+        setPrevPage(page)
+        setPage(page + 1)
+    }
+
+    const prev = ()=>{
+        setPrevPage(page- 2)
+        setPage(page - 1)
+    }
+
+    const pageCount = Math.round(data.length / filter)
   
     return (
+        <>
         <section className='shop-product-wrapper'>
             {data.map((datatium, index) => (
-                (index >= (filter * prevPage) && index <= (filter * page)) ? (
+                (index >= (filter * prevPage) && index <= ((filter * page)-1)) ? (
                     <ProductCard key={index} productId = {index} image={datatium.image} tag={datatium.tag} discountPercent={datatium.discountPercent} title={datatium.title} descr={datatium.descr} price={datatium.price} discount={datatium.discount} />
                 ) : (<></>)
             ))}
         </section>
+
+        <div className="pagination-container">
+            {page > 1 ? <button onClick={()=>{prev()}}>Prev</button> : <></>}
+            {data.map((dat, index)=>(
+                ((index+1) % filter == 0) ? (
+                    <p key={index} className= {(Math.round(index/filter) == page) ? 'active' : ''}>{Math.round(index/filter)}</p>
+                ) : (<></>)
+            ))}
+            {page != pageCount ? <button onClick={()=>{next()}}>Next</button> : <></>}
+        </div>
+        </>
     )
 }
 
