@@ -34,7 +34,7 @@ const NavBar = () => {
         </div>
 
         <div className="account-cart-wrapper">
-            <Link to="/"><img src={account} /></Link>
+            <Link to="/login"><img src={account} /></Link>
             <Link to="/"><img src={search} /></Link>
             <Link to="/"><img src={heart} /></Link>
             <Link to="/"><img src={cart} /></Link>        
@@ -49,7 +49,7 @@ const NavBar = () => {
             <Link to="/shop">Shop</Link>
             <Link to="/about">About</Link>
             <Link to="/contact">Contact</Link>
-            <Link to="/"><img src={account} /> Account</Link>
+            <Link to="/login"><img src={account} /> Account</Link>
             <Link to="/"><img src={heart} /> Favourites</Link>
             <Link to="/"><img src={cart} /> Cart</Link>    
         </div>

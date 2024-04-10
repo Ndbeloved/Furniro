@@ -1,9 +1,9 @@
 import Overlay from '../Overlay/Overlay'
 import './ProductCard.css'
 
-const ProductCard = ({image, discountPercent, tag, title, descr, price, discount, productId}) => {
+const ProductCard = ({image, discountPercent, tag, title, descr, price, discount, productId, keyIndex}) => {
   return (
-    <div className='product-card'>
+    <div className='product-card' key={productId}>
         <div className="image-cont">
             <img src={image}/>
 

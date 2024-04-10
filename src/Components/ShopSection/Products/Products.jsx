@@ -330,13 +330,11 @@ const Products = ({filter, page, setPage, prevPage, setPrevPage}) => {
     return (
         <>
         <section className='shop-product-wrapper' ref={topOfListRef}>
-            <Suspense fallback={<div>Loading...</div>}>
             {data.map((datatium, index) => (
                 (index >= (filter * prevPage) && index <= ((filter * page)-1)) ? (
                     <ProductCard key={index} productId = {index} image={datatium.image} tag={datatium.tag} discountPercent={datatium.discountPercent} title={datatium.title} descr={datatium.descr} price={datatium.price} discount={datatium.discount} />
                 ) : (<></>)
             ))}
-            </Suspense>
         </section>
 
         <div className="pagination-container">

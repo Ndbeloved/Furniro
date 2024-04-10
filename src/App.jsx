@@ -3,7 +3,7 @@ import './App.css'
 import Home from './Pages/Home/Home'
 import NavBar from './Components/NavBar/NavBar'
 import Footer from './Components/Footer/Footer'
-// import Shop from './Pages/Shop/Shop'
+import Login from './Components/Login/Login'
 import { Suspense, lazy } from 'react'
 
 
@@ -18,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path='/shop' element= {<Shop />} />
+          <Route path='/login' element={<Login />} />
         </Routes>
         </Suspense>
         <Footer />
