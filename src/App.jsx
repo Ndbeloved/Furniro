@@ -5,6 +5,7 @@ import NavBar from './Components/NavBar/NavBar'
 import Footer from './Components/Footer/Footer'
 import Login from './Components/Login/Login'
 import { Suspense, lazy } from 'react'
+import Loader from './Components/Loader/Loader'
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
     <div className='app'>
       <BrowserRouter>
         <NavBar />
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path='/shop' element= {<Shop />} />
