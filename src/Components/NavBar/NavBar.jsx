@@ -6,10 +6,20 @@ import cart from '../../assets/cart.svg'
 import heart from '../../assets/heart.svg'
 import menu_icon from '../../assets/menu.svg'
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
+  
+  //closes hamburger when link changes
+  useEffect(()=>{
+    const links = document.querySelectorAll('a')
+    links.forEach(link=>{
+      link.addEventListener('click', ()=>{
+        setMenuOpen(false)
+      })
+    })
+  }, [])
   return (
     <nav className='navbar'>
         <div className='logo-wrapper'>
