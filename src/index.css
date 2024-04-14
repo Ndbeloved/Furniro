@@ -37,3 +37,14 @@ body::-webkit-scrollbar-thumb{
     background: var(--primary-color500);
     border: 8px;
 }
+
+.slide-in{
+    opacity: 0;
+    top: 30px;
+    transition: 2s ease-in-out;
+}
+
+.slide-in.view{
+    opacity: 1;
+    top: 0px;
+}
