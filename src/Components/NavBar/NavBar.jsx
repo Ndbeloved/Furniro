@@ -7,9 +7,11 @@ import heart from '../../assets/heart.svg'
 import menu_icon from '../../assets/menu.svg'
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
+import PopUpCart from '../PopUpCart/PopUpCart'
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [cartOpen, setCartOpen] = useState(false)
   
   //closes hamburger when link changes
   useEffect(()=>{
@@ -37,7 +39,7 @@ const NavBar = () => {
             <Link to="/login"><img src={account} /></Link>
             <Link to="/"><img src={search} /></Link>
             <Link to="/"><img src={heart} /></Link>
-            <Link to="/"><img src={cart} /></Link>        
+            <Link to="/" onClick={()=>{setCartOpen(!cartOpen)}}><img src={cart} /></Link>        
         </div>
 
         <div className="mobile harmburger-btn" onClick={()=>{setMenuOpen(!menuOpen)}}>
@@ -53,6 +55,8 @@ const NavBar = () => {
             <Link to="/"><img src={heart} /> Favourites</Link>
             <Link to="/"><img src={cart} /> Cart</Link>    
         </div>
+
+        <PopUpCart visible={cartOpen}/>
     </nav>
   )
 }

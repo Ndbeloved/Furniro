@@ -14,7 +14,7 @@ const Login = () => {
             body: JSON.stringify({token})
         })
         .then(res => res.json())
-        .then(data => console.log('success'))
+        .then(data => console.log('success', data))
         .catch(error => console.log('Error parsing token to backend'))
     }
     return (
