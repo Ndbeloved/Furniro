@@ -10,6 +10,7 @@ import Loader from './Components/Loader/Loader'
 
 function App() {
   const Shop = lazy(()=> import('./Pages/Shop/Shop'))
+  const Cart = lazy(()=> import('./Components/PopUpCart/PopUpCart'))
 
   return (
     <div className='app'>
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path='/shop' element= {<Shop />} />
           <Route path='/login' element={<Login />} />
+          <Route path= '/cart' element = {<Cart />} />
         </Routes>
         </Suspense>
         <Footer />
