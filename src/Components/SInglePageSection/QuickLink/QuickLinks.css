@@ -1,0 +1,14 @@
+#single-page-quick-links{
+    padding: 2.5rem 5rem;
+    display: flex;
+    gap: 2rem;
+    background: var(--primary-color300);
+    width: 100%;
+
+    a{
+        text-decoration: none;
+        color: #9f9f9f;
+        font-size: 16px;
+        outline: none;
+    }
+}

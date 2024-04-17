@@ -17,7 +17,7 @@ const Overlay = ({type, id, name}) => {
         return(
             <div className="overlay">
                 <div className="wrapper-action">
-                    <Link to={`/product/${id}`} id='main'>View</Link>
+                    <Link to={`/shop/product/${id}`} id='main'>View</Link>
                     <div className="micro-actions">
                         <Link id='micro'><img src={share_icon} /> Share</Link>
                         <Link to={`/user/cart/${id}`} id='micro'><img src={cart} /> Cart</Link>
