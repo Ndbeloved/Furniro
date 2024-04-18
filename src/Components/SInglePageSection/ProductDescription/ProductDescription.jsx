@@ -101,7 +101,7 @@ const ProductDescription = () => {
         </div>
     </div>
 
-    <div className="description-container">
+    <div className="descriptions-container">
         <h1><span id={showing==1 ? 'active' : ''} onClick={()=> setShowing(1)} className='decr'>Description</span> <span className='review' id={showing == 2 ? 'active' : ''} onClick={()=> setShowing(2)}>Reviews[5]</span></h1>
 
         <p className={showing == 1 ? 'descr-content show' : 'descr-content'}>
