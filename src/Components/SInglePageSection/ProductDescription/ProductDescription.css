@@ -121,9 +121,163 @@
                 background: var(--primary-color500);
             }
         }
+
+        div.color-selector{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding: 1rem 0rem 1rem 0rem;
+            gap: 1.5rem;
+
+            p{
+                font-size: 16px;
+                color: #9f9f9f;
+            }
+
+            input{
+                display: none;
+            }
+
+            label{
+                position: relative;
+                padding: 0.4rem 1.1rem;
+                background: orangered;
+                margin-right: 5px;
+                border-radius: 50%;
+            }
+
+            input:checked + label::after{
+                content: "";
+                position: absolute;
+                top:50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 0.8rem;
+                width: 0.8rem;
+                border-radius: 50%;
+                background: #fff;
+            }
+        }
+
+        div.action-btns{
+            position: relative;
+            padding: 1.1rem 0rem 5rem 0rem;
+            border-bottom: 2px solid #9f9f9f;
+            display: flex;
+
+            div.quantity{
+                position: relative;
+                width: 100px;
+
+                img{
+                    position: absolute;
+                    height: 10px;
+                    width: 10px;
+                    z-index: 2;
+                    cursor: pointer;
+                }
+
+                input{
+                    width: 100%;
+                    position: relative;
+                    border: none;
+                    border: 1px solid #9f9f9f;
+                    border-radius: 10px;
+                    outline: none;
+                    padding: 1rem 2rem;
+                    z-index: 1;
+                    text-align: center;
+                    font-weight: 600;
+                }
+
+                img#minus{
+                    top: 50%;
+                    left: 10px;
+                    transform: translateY(-50%);
+                }
+
+                img#add{
+                    top: 50%;
+                    right: 10px;
+                    transform: translateY(-50%);
+                }
+                        
+            }
+
+            button{
+                padding: 0.5rem 1rem;
+                border-radius: 10px;
+                border: 1px solid #9f9f9f;
+                outline: none;
+                margin-left:1.1rem;
+                font-weight: 600;
+                cursor: pointer;
+            }
+        }
+
+        div.details-wrapper{
+            position: relative;
+            padding: 3rem 0rem;
+            width: 60%;
+
+            p{
+                color: #9f9f9f;
+                font-size: 16px;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
     }
 }
 
+
+div.description-container{
+    position: relative;
+    width: 100%;
+    padding: 3rem 5rem;
+    border-top: 2px solid #9f9f9f;
+
+    h1{
+        font-size: 24px;
+        font-weight: 600;
+        justify-content: center;
+        display: flex;
+        gap: 2rem;
+        cursor: pointer;
+        color: #9f9f9f;
+        z-index: -1;
+
+        span{
+            color: #9f9f9f;
+            font-weight: 500;
+            z-index: 1;
+        }
+
+        span#active{
+            color: #000000;
+            font-weight: 600;
+        }
+    }
+
+    h1#active{
+        color: #000000;
+    }
+
+    p.descr-content{
+        height: 0;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    p.descr-content.show{
+        height: fit-content;
+        color: #9f9f9f;
+        font-size: 16px;
+        line-height: 1.9;
+        padding: 1.5rem 1.5rem;
+    }
+}
 
 @media only screen and (max-width: 700px){
     .single-product-description{
@@ -205,5 +359,35 @@
                 }
             }
         }
+    }
+
+    div.description-container{
+        position: relative;
+        width: 100%;
+        padding: 3rem 3%;
+        border-top: 2px solid #9f9f9f;
+    
+        h1{
+            font-size: 20px;
+            font-weight: 600;
+            justify-content: center;
+            display: flex;
+            gap: 2rem;
+            outline: none;
+    
+            span{
+                color: #9f9f9f;
+                font-weight: 500;
+            }
+        }
+
+        p.descr-content.show{
+            height: fit-content;
+            color: #9f9f9f;
+            font-size: 16px;
+            line-height: 1.9;
+            padding: 1.5rem 0rem;
+        }
+        
     }
 }
