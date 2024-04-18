@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 
 const ProductDescription = () => {
     const [quantity, setQuantity] = useState(1)
-    const [showing, setShowing] = useState(2)
+    const [showing, setShowing] = useState(1)
     const data ={
         title: "Sample product",
         price: "250,000.00",
