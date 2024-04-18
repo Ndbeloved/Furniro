@@ -246,11 +246,13 @@ div.description-container{
         cursor: pointer;
         color: #9f9f9f;
         z-index: -1;
+        outline: none;
 
         span{
             color: #9f9f9f;
             font-weight: 500;
             z-index: 1;
+            outline: none;
         }
 
         span#active{
@@ -386,7 +388,7 @@ div.description-container{
             color: #9f9f9f;
             font-size: 16px;
             line-height: 1.9;
-            padding: 1.5rem 0rem;
+            padding: 1.5rem 1.5rem;
         }
         
     }
